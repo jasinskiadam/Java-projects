@@ -71,5 +71,14 @@ public class Class implements Comparator<String> {
         }
         return result;
     }
+
+    public int countByCondition(Student.StudentCondition condition){
+        int result = 0;
+        for(Student student: students){
+            if(student.condition==condition)
+                result++;
+        }
+        return result;
+    }
 }
 
