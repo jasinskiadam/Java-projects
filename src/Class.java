@@ -16,5 +16,19 @@ public class Class implements Comparator<String> {
     public int compare(String s1, String s2){
         return s1.compareToIgnoreCase(s2);
     }
+    public void addStudent(Student s){
+        try{
+            if(students.size() >= max_students)
+                throw new Exception("Max number of students");
+            for(Student student: students) {
+                if(student.name.equals(s.name))
+                    throw new Exception("Student is already in the group");
+            }
+            students.add(s);
+        }
+        catch (Exception E) {
+            System.err.println("Error: " + E);
+        }
+    }
 }
 
