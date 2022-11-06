@@ -80,5 +80,11 @@ public class Class implements Comparator<String> {
         }
         return result;
     }
+
+    public void summary(){
+        for(Student student: students){
+            student.printData();
+        }
+    }
 }
 
