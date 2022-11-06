@@ -45,5 +45,8 @@ public class Class implements Comparator<String> {
         student.condition = condition;
     }
 
+    public void removePoints(Student student, double points){
+        student.points -= points;
+    }
 }
 
