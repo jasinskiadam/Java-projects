@@ -34,5 +34,11 @@ public class Class implements Comparator<String> {
     public void addPoints(Student student, double points){
         student.points += points;
     }
+
+    public void getStudent(Student student){
+        student.points--;
+        if(student.points<=0)
+            this.students.remove(student);
+    }
 }
 
