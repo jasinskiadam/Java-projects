@@ -48,5 +48,19 @@ public class Class implements Comparator<String> {
     public void removePoints(Student student, double points){
         student.points -= points;
     }
+
+    public Student search(String str){
+        try {
+            for (Student student : students) {
+                if (compare(str, student.surname) == 0)
+                    return student;
+            }
+            throw new Exception("There is no student with this surname");
+        }
+        catch(Exception e){
+            System.err.println("Error: " + e);
+        }
+        return new Student("Brak", "Brak", Student.StudentCondition.ABSENT, 0, 0, 0,"Brak");
+    }
 }
 
