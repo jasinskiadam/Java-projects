@@ -102,5 +102,9 @@ public class Class implements Comparator<String> {
         });
         return students;
     }
+
+    public void max(){
+        System.out.println(Collections.max(students, Comparator.comparing(Student::getPoints)).surname);
+    }
 }
 
