@@ -16,6 +16,7 @@ public class Class implements Comparator<String> {
     public int compare(String s1, String s2){
         return s1.compareToIgnoreCase(s2);
     }
+
     public void addStudent(Student s){
         try{
             if(students.size() >= max_students)
@@ -89,6 +90,16 @@ public class Class implements Comparator<String> {
 
     public List<Student> sortByName(){
         students.sort(Comparator.comparing(Student::getName));
+        return students;
+    }
+
+    public List<Student> sortByPoints(){
+        students.sort(new Comparator<>(){
+            @Override
+            public int compare(Student s1, Student s2){
+                return Double.compare(s1.getPoints(), s2.getPoints());
+            }
+        });
         return students;
     }
 }
