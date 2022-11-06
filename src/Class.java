@@ -86,5 +86,10 @@ public class Class implements Comparator<String> {
             student.printData();
         }
     }
+
+    public List<Student> sortByName(){
+        students.sort(Comparator.comparing(Student::getName));
+        return students;
+    }
 }
 
