@@ -40,5 +40,10 @@ public class Class implements Comparator<String> {
         if(student.points<=0)
             this.students.remove(student);
     }
+
+    public void changeCondition(Student student, Student.StudentCondition condition){
+        student.condition = condition;
+    }
+
 }
 
