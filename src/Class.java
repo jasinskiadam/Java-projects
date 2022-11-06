@@ -62,5 +62,14 @@ public class Class implements Comparator<String> {
         }
         return new Student("Brak", "Brak", Student.StudentCondition.ABSENT, 0, 0, 0,"Brak");
     }
+
+    public List<Student> searchPartial(String str){
+        List<Student> result = new ArrayList<>();
+        for(Student student : students){
+            if(student.name.contains(str)||student.surname.contains(str))
+                result.add(student);
+        }
+        return result;
+    }
 }
 
