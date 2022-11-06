@@ -30,5 +30,9 @@ public class Class implements Comparator<String> {
             System.err.println("Error: " + E);
         }
     }
+
+    public void addPoints(Student student, double points){
+        student.points += points;
+    }
 }
 
