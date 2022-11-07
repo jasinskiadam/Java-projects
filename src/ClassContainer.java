@@ -11,4 +11,8 @@ public class ClassContainer {
     public void addClass(String group_name, int max_students){
         this.groups.put(group_name, new Class(group_name, max_students));
     }
+
+    public void removeClass(String group_name){
+        this.groups.remove(group_name);
+    }
 }
