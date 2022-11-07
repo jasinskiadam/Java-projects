@@ -27,4 +27,10 @@ public class ClassContainer {
         }
         return result;
     }
+
+    public void summary(){
+        for(String key : this.groups.keySet()){
+            System.out.println("Group: " + key + "\tFull in: " + this.groups.get(key).students.size()*100/this.groups.get(key).max_students + "%");
+        }
+    }
 }
