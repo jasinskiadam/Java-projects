@@ -61,7 +61,7 @@ public class Class implements Comparator<String> {
         catch(Exception e){
             System.err.println("Error: " + e);
         }
-        return new Student("Brak", "Brak", Student.StudentCondition.ABSENT, 0, 0, 0,"Brak");
+        return new Student("Brak", "Brak", Student.StudentCondition.ABSENT, 0, 0, "Brak");
     }
 
     public List<Student> searchPartial(String str){
@@ -105,6 +105,18 @@ public class Class implements Comparator<String> {
 
     public void max(){
         System.out.println(Collections.max(students, Comparator.comparing(Student::getPoints)).surname);
+    }
+
+    public String getGroupName(){
+        return this.group_name;
+    }
+
+    public void setGroup_name(String name){
+        this.group_name = name;
+    }
+
+    public void setMax(int max){
+        this.max_students = max;
     }
 }
 
